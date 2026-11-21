@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crave - Food Made With Love</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">✦</span>
+            crave<span>.</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="cart-button" id="cartButton">
+                🛒 <span>Cart</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="mobile-menu" id="mobileMenu">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">GOOD FOOD. GOOD MOOD.</span>
+
+            <h1>Made with love.<br>
+                <span>Served with joy.</span>
+            </h1>
+
+            <p>
+                Delicious meals, fresh ingredients, and unforgettable
+                flavors — delivered straight to your doorstep.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    Explore Menu <span>→</span>
+                </a>
+
+                <a href="#about" class="btn btn-secondary">
+                    Our Story
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>4.9 <span>★</span></strong>
+                    <small>Customer Rating</small>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div>
+                    <strong>30<span>min</span></strong>
+                    <small>Average Delivery</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-image-wrapper">
+                <img
+                    src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85"
+                    alt="Delicious freshly prepared pizza"
+                    class="hero-image"
+                >
+
+                <div class="floating-card delivery-card">
+                    <span class="delivery-icon">🚚</span>
+                    <div>
+                        <strong>Fast Delivery</strong>
+                        <small>At your doorstep</small>
+                    </div>
+                </div>
+
+                <div class="floating-card rating-card">
+                    <span>⭐</span>
+                    <div>
+                        <strong>4.9/5</strong>
+                        <small>Loved by foodies</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-decoration"></div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories section" id="menu">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">EXPLORE OUR MENU</span>
+                <h2>What are you <span>craving?</span></h2>
+            </div>
+
+            <p>Something delicious for every mood.</p>
+        </div>
+
+        <div class="category-list" id="categoryList">
+            <button class="category-item active" data-category="All">
+                <span>🍽️</span>
+                <strong>All Food</strong>
+            </button>
+
+            <button class="category-item" data-category="Pizza">
+                <span>🍕</span>
+                <strong>Pizza</strong>
+            </button>
+
+            <button class="category-item" data-category="Burger">
+                <span>🍔</span>
+                <strong>Burgers</strong>
+            </button>
+
+            <button class="category-item" data-category="Pasta">
+                <span>🍝</span>
+                <strong>Pasta</strong>
+            </button>
+
+            <button class="category-item" data-category="Dessert">
+                <span>🍰</span>
+                <strong>Desserts</strong>
+            </button>
+
+            <button class="category-item" data-category="Drinks">
+                <span>🥤</span>
+                <strong>Drinks</strong>
+            </button>
+        </div>
+
+        <!-- Search -->
+        <div class="menu-toolbar">
+            <div>
+                <h3>Our Popular Dishes</h3>
+                <p>Freshly prepared, just for you.</p>
+            </div>
+
+            <div class="search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search delicious food..."
+                >
+            </div>
+        </div>
+
+        <!-- Food Cards -->
+        <div class="food-grid" id="foodGrid"></div>
+    </section>
+
+    <!-- Special Offer -->
+    <section class="offer-section" id="about">
+        <div class="offer-content">
+            <span class="eyebrow">A LITTLE SOMETHING EXTRA</span>
+            <h2>Good food tastes<br>even better with <span>friends.</span></h2>
+            <p>
+                Share the joy of delicious food.
+                Get 20% off your first order.
+            </p>
+
+            <a href="#menu" class="btn btn-light">
+                Order Now →
+            </a>
+        </div>
+
+        <div class="offer-image">
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+                alt="Fresh food served beautifully"
+            >
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="benefits section">
+        <div class="section-heading centered">
+            <span class="eyebrow">WHY CRAVE?</span>
+            <h2>Food that makes <span>you smile.</span></h2>
+        </div>
+
+        <div class="benefit-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🥬</div>
+                <h3>Fresh Ingredients</h3>
+                <p>We use fresh, quality ingredients in every dish.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">👨‍🍳</div>
+                <h3>Made with Love</h3>
+                <p>Every meal is carefully prepared by our chefs.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <h3>Quick Delivery</h3>
+                <p>Hot, delicious food delivered right to your door.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-main">
+            <div>
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">✦</span>
+                    crave<span>.</span>
+                </a>
+
+                <p>
+                    Bringing happiness to your plate,<br>
+                    one delicious bite at a time.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="#home">Home</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#about">About Us</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="#contact">Contact Us</a>
+                <a href="#contact">Instagram</a>
+                <a href="#contact">Facebook</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Crave. Made with ❤️ for food lovers.</p>
+            <p>Good food, good life.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h2>Your Cart 🛒</h2>
+                <button id="closeCart" class="close-button">✕</button>
+            </div>
+
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">₹0</strong>
+                </div>
+
+                <button class="btn btn-primary checkout-button" id="checkoutButton">
+                    Proceed to Checkout →
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
